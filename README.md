@@ -72,7 +72,7 @@ While grunt can run the included unit tests via PhantomJS, this isn't a substitu
 
 ## Acknowledgements
 
-We are grateful to the maintainers, contributors, and sponsors of the following technologies which make FuelUX possible:
+We are grateful to the maintainers, contributors, and sponsors of the following technologies which make Diesel UI possible:
 
 * [Fuel UX](http://exacttarget.github.io/fuelux/) (Original extension)
 
