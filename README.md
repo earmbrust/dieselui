@@ -1,4 +1,5 @@
 Diesel UI was forked from the popular Fuel UX Twitter Bootstrap extension.
+
 Diesl UI extends Twitter Bootstrap with additional lightweight JavaScript controls.
 Other benefits include easy installation into web projects, integrated scripts for customizing Bootstrap and Diesl UI,
 simple updates, and solid optimization for deployment. All functionality is covered by live documentation and unit tests.
@@ -62,15 +63,11 @@ our roadmap.
 
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
 
-More about [Contributing to Diesl UI](https://github.com/earmbrust/dieselui/wiki/Contributing-to-Fuel-UX)
-
 ### Important notes
 __The `dist` directory will be removed soon, to provide sanity for the SCM and lighter pulls.__
 Please don't edit files in the `dist` directory as they are generated via grunt. You'll find source code in the `src` directory!
 
 While grunt can run the included unit tests via PhantomJS, this isn't a substitute for the real thing. Please be sure to test the `test/*.html` unit test file(s) in real browsers as well.
-
-More about [Installing grunt and PhantomJS](https://github.com/earmbrust/dieselui/wiki/Installing-grunt-and-PhantomJS)
 
 
 ## Acknowledgements
@@ -83,9 +80,9 @@ We are grateful to the maintainers, contributors, and sponsors of the following 
 
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap) (Modern UI components and interactions)
 
-* [LESS](http://lesscss.org) and [recess](http://twitter.github.com/recess) (Stylesheet definition and management)
+* [LESS](http://lesscss.org) (Stylesheet definition and management)
 
-* [RequireJS](http://requirejs.org) and [volo](https://github.com/volojs/volo) (Tools for managing modular JavaScript)
+* [RequireJS](http://requirejs.org) (Tool for managing modular JavaScript)
 
 * [grunt](https://github.com/cowboy/grunt) (Build tool for JavaScript projects)
 
