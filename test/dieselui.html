@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Fuel UX Test Suite</title>
+	<title>Diesel UI Test Suite</title>
 	<link rel="stylesheet" href="../lib/qunit/qunit.css" media="screen">
 	<script src="../lib/qunit/qunit.js"></script>
 	<script src="/testem.js"></script>
@@ -15,6 +15,11 @@
 				jquery: '../lib/jquery',
 				bootstrap: '../lib/bootstrap/js',
 				fuelux: '../src'
+			},
+			shim: {
+				'jquery': {
+		            exports: '$'
+		        },
 			}
 		});
 	</script>
@@ -32,7 +37,7 @@
 	<script src="wizard-test.js"></script>
 </head>
 <body>
-<h1 id="qunit-header">Fuel UX Test Suite</h1>
+<h1 id="qunit-header">Diesel UI Test Suite</h1>
 
 <h2 id="qunit-banner"></h2>
 
