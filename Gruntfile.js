@@ -11,6 +11,9 @@ module.exports = function(grunt) {
 			' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
 		},
 		qunit: {
+			options: {
+		      timeout: 15000
+		    },
 			tests: ['test/**/*.html']
 		},
 		watch: {
@@ -39,17 +42,26 @@ module.exports = function(grunt) {
 			},
 			defaults: ['src/**/*.js']
 		},
+		bower: {
+			libs: {
+				options: {
+					layout: "byComponent"
+				}
+			}
+		},
 		clean: {
 			dist: ['dist/build.txt', 'dist/fuelux.zip'],
-			zipsrc: ['dist/fuelux']
+			zipsrc: ['dist/fuelux'],
+			libs: ['lib']
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-qunit');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-bower-task');
 
 	// Default task.
-	grunt.registerTask('default', ['jshint', 'qunit']);
-	grunt.registerTask('devserver', ['lint', 'qunit', 'recess', 'server', 'watch']); // development server
+	grunt.registerTask('default', ['bower', 'jshint', 'qunit']);
+	grunt.registerTask('devserver', ['bower', 'lint', 'qunit', 'recess', 'server', 'watch']); // development server
 
 };

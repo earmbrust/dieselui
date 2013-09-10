@@ -2,7 +2,7 @@
 /*global start:false, stop:false ok:false, equal:false, notEqual:false, deepEqual:false*/
 /*global notDeepEqual:false, strictEqual:false, notStrictEqual:false, raises:false*/
 
-require(['jquery', 'fuelux/pillbox'], function($) {
+require(['jquery', 'dieselui/pillbox'], function($) {
 
 	module("Fuel UX pillbox", {
 		setup: function(){

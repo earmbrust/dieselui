@@ -2,7 +2,7 @@
 /*global start:false, stop:false ok:false, equal:false, notEqual:false, deepEqual:false*/
 /*global notDeepEqual:false, strictEqual:false, notStrictEqual:false, raises:false*/
 
-require(['jquery', 'fuelux/radio'], function ($) {
+require(['jquery', 'dieselui/radio'], function ($) {
 
 	var html = '<div>' +
 		'<label class="radio radio-custom" id="lbl1"><input id="radio1" type="radio" name="radio1" checked="checked"><i class="radio"></i>Custom: Checked Enabled</label>' +

@@ -2,7 +2,7 @@
 /*global start:false, stop:false ok:false, equal:false, notEqual:false, deepEqual:false*/
 /*global notDeepEqual:false, strictEqual:false, notStrictEqual:false, raises:false*/
 
-require(['jquery', 'fuelux/select'], function ($) {
+require(['jquery', 'dieselui/select'], function ($) {
 
 	var html = '<div class="select btn-group">' +
 		'<button data-toggle="dropdown" class="btn dropdown-toggle"><span class="dropdown-label"></span><span class="caret"></span></button>' +

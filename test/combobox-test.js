@@ -2,7 +2,7 @@
 /*global start:false, stop:false ok:false, equal:false, notEqual:false, deepEqual:false*/
 /*global notDeepEqual:false, strictEqual:false, notStrictEqual:false, raises:false*/
 
-require(['jquery', 'fuelux/combobox'], function ($) {
+require(['jquery', 'dieselui/combobox'], function ($) {
 
 	var html = '<div class="input-append dropdown combobox">' +
 		'<input class="span2" type="text"><button class="btn" data-toggle="dropdown"><i class="caret"></i></button>' +

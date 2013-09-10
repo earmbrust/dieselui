@@ -3,38 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Diesel UI Test Suite</title>
-	<link rel="stylesheet" href="../lib/qunit/qunit.css" media="screen">
-	<script src="../lib/qunit/qunit.js"></script>
-	<script src="/testem.js"></script>
-	<script src="../lib/require.js"></script>
-
-	<script>
-		require.config({
-			baseUrl: '../src',
-			paths: {
-				jquery: '../lib/jquery',
-				bootstrap: '../lib/bootstrap/js',
-				fuelux: '../src'
-			},
-			shim: {
-				'jquery': {
-		            exports: '$'
-		        },
-			}
-		});
+	<link rel="stylesheet" href="../lib/qunit/qunit/qunit.css" media="screen">
+	<script src="../lib/qunit/qunit/qunit.js"></script>
+	<script type="text/javascript">
+		QUnit.config.autostart = false;
 	</script>
+	<script src="../lib/requirejs/require.js" data-main="suite-test.js"></script>
 
-	<script src="fuelux-test.js"></script>
-	<script src="checkbox-test.js"></script>
-	<script src="combobox-test.js"></script>
-	<script src="datagrid-test.js"></script>
-	<script src="pillbox-test.js"></script>
-	<script src="radio-test.js"></script>
-	<script src="search-test.js"></script>
-	<script src="spinner-test.js"></script>
-	<script src="select-test.js"></script>
-	<script src="tree-test.js"></script>
-	<script src="wizard-test.js"></script>
 </head>
 <body>
 <h1 id="qunit-header">Diesel UI Test Suite</h1>

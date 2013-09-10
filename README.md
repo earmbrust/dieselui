@@ -21,7 +21,7 @@ Diesl UI provides all of the styles and plugins from the revolutionary [Twitter 
   * Spinner - _provides convenient numeric input with increment and decrement buttons_
   * Tree - _renders data in a tree, supporting caching and optional multi-selection_
   * Wizard - _displays a multi-step process to be completed in a specific order_
-<p>
+
 * [AMD](http://requirejs.org/docs/whyamd.html) compatibility for modular structure and deployment optimization
 * [Grunt](https://github.com/cowboy/grunt)-based build script to easily create custom distribution files
 * Namespaced CSS (just add a `fuelux` class) for safe use on existing sites
@@ -43,10 +43,6 @@ Hosted on GitHub pages: http://exacttarget.github.com/fuelux
 ### Search for or report a bug
 
 Use GitHub issues: https://github.com/earmbrust/dieselui/issues
-
-### View the roadmap and suggest new ideas
-
-Visit our UserVoice community: https://fuelux.uservoice.com
 
 ## Release History
 
@@ -138,7 +134,7 @@ We are grateful to the maintainers, contributors, and sponsors of the following 
 
 ## Copyright and license
 
-Copyright (c) 2012 Elden Armbrust
+Copyright (c) 2013 Elden Armbrust
 
 Licensed under the MIT License (the "License");
 you may not use this work except in compliance with the License.

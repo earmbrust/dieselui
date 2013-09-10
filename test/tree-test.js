@@ -2,7 +2,7 @@
 /*global start:false, stop:false ok:false, equal:false, notEqual:false, deepEqual:false*/
 /*global notDeepEqual:false, strictEqual:false, notStrictEqual:false, raises:false*/
 
-require(['jquery', 'fuelux/tree'], function($) {
+require(['jquery', 'dieselui/tree'], function($) {
 
 	module("Fuel UX tree");
 
