@@ -1,25 +1,25 @@
 {
-  "name": "fuelux",
-  "title": "Fuel UX",
-  "version": "2.3.1",
-  "description": "Base Fuel UX styles and controls",
-  "homepage": "https://github.com/ExactTarget/fuelux",
+  "name": "dieselui",
+  "title": "Diesel UI",
+  "version": "1.0.0",
+  "description": "Base Diesel UI styles and controls",
+  "homepage": "https://github.com/earmbrust/dieselui",
   "author": {
-    "name": "ExactTarget",
-    "email": "aalexander@exacttarget.com",
-    "url": "http://code.exacttarget.com"
+    "name": "Elden Armbrust",
+    "email": "earmbrust@gmail.com",
+    "url": "https://github.com/earmbrust"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ExactTarget/fuelux.git"
+    "url": "https://github.com/earmbrust/dieselui.git"
   },
   "bugs": {
-    "url": "https://github.com/ExactTarget/fuelux/issues"
+    "url": "https://github.com/earmbrust/dieselui/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/ExactTarget/fuelux/blob/master/COPYING"
+      "url": "https://github.com/armbrust/dieselui/blob/master/COPYING"
     }
   ],
   "engines": {
@@ -38,15 +38,9 @@
     "grunt-contrib-less": "~0.7.0"
   },
   "keywords": [
-    "fuelux",
-    "fuel ux",
+    "dieselui",
+    "diesel ui",
     "bootstrap"
   ],
-  "private": true,
-  "volo": {
-    "baseDir": "lib",
-    "url": "https://raw.github.com/ExactTarget/fuelux/{version}/dist/fuelux.zip",
-    "type": "directory",
-    "dependencies": {}
-  }
+  "private": true
 }
