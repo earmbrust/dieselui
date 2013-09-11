@@ -49,8 +49,23 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		less: {
+		  development: {
+		    options: {
+		      paths: ["bower_components/"]
+		    },
+		    files: {
+		      "dist/checkbox.css": [
+		      	"src/less/dieselui.less",
+		      	"src/less/checkbox.less",
+		      	"src/less/combobox.less",
+		      	"src/less/datagrid.less",
+		      ]
+		    }
+		  }
+		},
 		clean: {
-			dist: ['dist/build.txt', 'dist/fuelux.zip'],
+			dist: ['dist'],
 			zipsrc: ['dist/fuelux'],
 			libs: ['lib']
 		}
@@ -59,6 +74,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-qunit');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-bower-task');
+	grunt.loadNpmTasks('grunt-contrib-less');
 
 	// Default task.
 	grunt.registerTask('default', ['bower', 'jshint', 'qunit']);
