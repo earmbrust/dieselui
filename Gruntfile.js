@@ -55,16 +55,55 @@ module.exports = function(grunt) {
 		      paths: ["bower_components/"]
 		    },
 		    files: {
-		      "dist/checkbox.css": [
-		      	"src/less/dieselui.less",
-		      	"src/less/checkbox.less",
-		      	"src/less/combobox.less",
-		      	"src/less/datagrid.less",
+		      "dist/css/dieselui.css": [
+		      	"src/less/dieselui.less"
 		      ]
 		    }
 		  }
 		},
+		requirejs: {
+			combine: {
+				options: {
+					appDir: 'src',
+					baseUrl: '.',
+					dir: 'dist',
+					optimize: 'none',
+					optimizeCss: 'none',
+					wrap: true,
+					paths: {
+						almond: '../lib/almond/almond',
+						bootstrap: '../lib/bootstrap/bootstrap',
+						jquery: '../lib/jquery/jquery',
+						dieselui: '../dist'
+					},
+					modules: [
+						{
+							name: 'dieselui/all',
+							exclude: ['jquery']
+						},
+						{
+							name: 'dieselui/loader',
+							include: ['almond', 'dieselui/all'],
+							exclude: ['jquery']
+						}
+					]
+				}
+			}
+		},
+		uglify: {
+			options: {
+				compress: true,
+				mangle: false
+			},
+		    min: {
+		      files: {
+		        'dist/loader.min.js': ['dist/loader.js'],
+		        'dist/all.min.js': ['dist/all.js']
+		      }
+		    }
+		  },
 		clean: {
+			default: ['bower_components', 'lib'],
 			dist: ['dist'],
 			zipsrc: ['dist/fuelux'],
 			libs: ['lib']
@@ -75,9 +114,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-bower-task');
 	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-contrib-requirejs');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// Default task.
-	grunt.registerTask('default', ['bower', 'jshint', 'qunit']);
-	grunt.registerTask('devserver', ['bower', 'lint', 'qunit', 'recess', 'server', 'watch']); // development server
+	grunt.registerTask('default', ['clean', 'bower', 'jshint', 'qunit', 'requirejs', 'uglify', 'less']);
+	//grunt.registerTask('devserver', ['bower', 'lint', 'qunit', 'recess', 'server', 'watch']); // development server
 
 };

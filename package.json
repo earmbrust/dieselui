@@ -35,7 +35,9 @@
     "grunt-contrib-compress": "~0.5.2",
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-bower-task": "~0.3.2",
-    "grunt-contrib-less": "~0.7.0"
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.4"
   },
   "keywords": [
     "dieselui",
