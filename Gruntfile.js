@@ -102,6 +102,14 @@ module.exports = function(grunt) {
 		      }
 		    }
 		  },
+		  connect: {
+		    server: {
+		      options: {
+		        port: 9001,
+		        base: '.'
+		      }
+		    }
+		  },
 		clean: {
 			default: ['bower_components', 'lib'],
 			dist: ['dist'],
@@ -116,9 +124,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 
 	// Default task.
 	grunt.registerTask('default', ['clean', 'bower', 'jshint', 'qunit', 'requirejs', 'uglify', 'less']);
-	//grunt.registerTask('devserver', ['bower', 'lint', 'qunit', 'recess', 'server', 'watch']); // development server
+	grunt.registerTask('devserver', ['bower', 'jshint', 'qunit', 'connect', 'watch']); // development server
 
 };
