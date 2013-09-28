@@ -64,6 +64,19 @@ define(function (require) {
 			this.$chk.click();
 		},
 
+		value: function (value) {
+			if (typeof value === "boolean") {
+				if (value === true) {
+					this.$chk.attr('checked', 'checked');
+				} else {
+					this.$chk.removeAttr('checked');
+				}
+				
+				this.setState(this.$chk);
+			}
+			return !!this.$chk.attr('checked');
+		},
+
 		itemchecked: function (e) {
 			var chk = $(e.target);
 			this.setState(chk);

@@ -64,6 +64,14 @@ define(['jquery', 'checkbox'], function ($) {
 			$chk1.checkbox('toggle');
 			equal($chk1.is(':checked'), true, 'checked');
 
+
+			equal($chk1.checkbox('value'), true, 'checked [new]');
+			$chk1.checkbox('value', false);
+			equal($chk1.checkbox('value'), false, 'unchecked [new]');
+			$chk1.checkbox('value', true);
+			equal($chk1.checkbox('value'), true, 'unchecked [new]');
+
+
 			$fixture.remove();
 		});
 	}
