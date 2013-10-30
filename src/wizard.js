@@ -19,7 +19,7 @@ define(function (require) {
 		this.$element = $(element);
 		this.options = $.extend({}, $.fn.wizard.defaults, options);
 		this.currentStep = 1;
-		this.numSteps = this.$element.find('li').length;
+		this.numSteps = this.$element.find('.steps li').length;
 		this.$prevBtn = this.$element.find('button.btn-prev');
 		this.$nextBtn = this.$element.find('button.btn-next');
 
@@ -30,7 +30,7 @@ define(function (require) {
 		// handle events
 		this.$prevBtn.on('click', $.proxy(this.previous, this));
 		this.$nextBtn.on('click', $.proxy(this.next, this));
-		this.$element.on('click', 'li.complete', $.proxy(this.stepclicked, this));
+		this.$element.on('click', '.steps li.complete', $.proxy(this.stepclicked, this));
 	};
 
 	Wizard.prototype = {
@@ -58,25 +58,25 @@ define(function (require) {
 			}
 
 			// reset classes for all steps
-			var $steps = this.$element.find('li');
+			var $steps = this.$element.find('.steps li');
 			$steps.removeClass('active').removeClass('complete');
 			$steps.find('span.badge').removeClass('badge-info').removeClass('badge-success');
 
 			// set class for all previous steps
-			var prevSelector = 'li:lt(' + (this.currentStep - 1) + ')';
+			var prevSelector = '.steps li:lt(' + (this.currentStep - 1) + ')';
 			var $prevSteps = this.$element.find(prevSelector);
 			$prevSteps.addClass('complete');
 			$prevSteps.find('span.badge').addClass('badge-success');
 
 			// set class for current step
-			var currentSelector = 'li:eq(' + (this.currentStep - 1) + ')';
+			var currentSelector = '.steps li:eq(' + (this.currentStep - 1) + ')';
 			var $currentStep = this.$element.find(currentSelector);
 			$currentStep.addClass('active');
 			$currentStep.find('span.badge').addClass('badge-info');
 
 			// set display of target element
 			var target = $currentStep.data().target;
-			$('.step-pane').removeClass('active');
+			this.$element.find('.step-pane').removeClass('active');
 			$(target).addClass('active');
 
 			this.$element.trigger('changed');
